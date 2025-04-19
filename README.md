@@ -33,6 +33,8 @@ Tools and Technologies
 
 •	Hugging Face: For pre-trained models.
 
+![Alt text]()
+![Alt text]()
  
  
 
