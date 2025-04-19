@@ -33,10 +33,6 @@ Tools and Technologies
 
 •	Hugging Face: For pre-trained models.
 
-![Alt text]()
-![Alt text]()
- 
- 
 
 AI Techniques Employed
 
@@ -50,3 +46,10 @@ Expected Outcomes
 •	Gradio interface for interactively navigating the process of generating soundscapes from images (optional)
 
 •	A final report with results analysis, critical reflections, and observations on how the AI models handle the transformation from image to sound.
+
+
+![Alt text](https://github.com/napstablook911/From-Vision-to-Sound-GenAI-Explorations-Between-Image-and-Soundscape/blob/main/15AD22E0.png#:~:text=Files%C2%A0mainAdd%20filet-,15AD22E0.png)
+
+![Alt text](https://github.com/napstablook911/From-Vision-to-Sound-GenAI-Explorations-Between-Image-and-Soundscape/blob/main/7D900561.png#:~:text=Files%C2%A0mainAdd%20filet15AD22E0.png-,7D900561.png)
+ 
+
