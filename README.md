@@ -43,7 +43,7 @@ Expected Outcomes
 
 •	Soundscapes: Generated from images, providing a listening experience for each visual input.
 
-•	[Gradio interface](https://www.gradio.app) / [Firebase studio](https://firebase.google.com): for interactively navigating the process of generating soundscapes from images (optional)
+•	[Gradio interface](https://www.gradio.app)/[Firebase studio](https://firebase.google.com): for interactively navigating the process of generating soundscapes from images (optional)
 
 •	A final report with results analysis, critical reflections, and observations on how the AI models handle the transformation from image to sound.
 
