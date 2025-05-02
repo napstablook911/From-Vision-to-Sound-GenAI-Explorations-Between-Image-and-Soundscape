@@ -17,28 +17,28 @@ Objectives
 
 •	Assess the semantic and sensory coherence between images and the corresponding soundscapes.
 
-•	Creation of a user-friendly web interface (optional)
+•	Creation of a user-friendly web interface
 
 Tools and Technologies
 
-•	Google Colab: To manage and run the entire workflow.
+•	[Google Colab](https://colab.research.google.com/drive/1_zZ2UCEBYPDsA7v3CW4ic-yPSMhY440r#scrollTo=01e--5cHKO_r): To manage and run the entire workflow. (Link is a draft of what the pipeline might look like, very rough draft)
 
 •	Python + AI Libraries: transformers, diffusers, torch, torchaudio
 
-•	CLIP or BLIP: for image captioning
+•	[CLIP](https://huggingface.co/openai/clip-vit-large-patch14) or [BLIP](https://huggingface.co/Salesforce/blip-image-captioning-base): for image captioning
 
-•	MusicGen from Facebook (or another text-to-audio model, depending on results) 
+•	[MusicGen from Facebook](https://huggingface.co/spaces/facebook/MusicGen) (or another text-to-audio model, depending on results) 
 
-•	Gradio: To build a web interface.
+•	[Gradio](https://www.gradio.app)/[Firebase studio](https://firebase.google.com): To build a web interface.
 
-•	Hugging Face: For pre-trained models.
+•	[Hugging Face](https://huggingface.co/models): For pre-trained models.
 
 
 AI Techniques Employed
 
 •	Vision-to-Text: Multimodal models (BLIP, CLIP) to generate a textual description from an image.
 
-•	Text-to-Audio: Models like MusicGen and trials with other different Hugging Face-based models for synthesizing audio from textual prompts.
+•	Text-to-Audio: Models like [MusicGen](https://huggingface.co/spaces/facebook/MusicGen) and trials with other different Hugging Face-based models for synthesizing audio from textual prompts.
 Expected Outcomes
 
 •	Soundscapes: Generated from images, providing a listening experience for each visual input.
