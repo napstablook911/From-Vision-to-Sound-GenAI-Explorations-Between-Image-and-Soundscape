@@ -1,0 +1,9 @@
+streamlit
+transformers
+diffusers
+torch
+soundfile
+Pillow
+numpy
+torchsde
+accelerate
