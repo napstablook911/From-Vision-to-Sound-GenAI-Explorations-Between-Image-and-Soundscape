@@ -55,7 +55,7 @@ The goal of this project is to investigate how deep learning models interpret vi
 
 * **Soundscapes**: Original 5-second soundscapes generated from visual inputs.
 * **Interactive Interface**: A Streamlit web app to upload an image, generate a caption, and listen to the resulting sound.
-* **Soundscapes folder**: Google Drive folder with results organized by prompt, available for consultation.
+* **Soundscapes folder**: [Google drive folder](https://drive.google.com/drive/folders/1C4PcwewEqcHzgb4Ak4kEKICSO8oAyHnF?usp=sharing) with results organized by prompt, available for consultation. 
 
 ---
 
@@ -127,14 +127,49 @@ import torch
 print(torch.backends.mps.is_available())
 ```
 
+Perfetto, ecco una versione migliorata e ben strutturata della sezione **Example Workflow**, con spazi per le immagini che raffigurano i passaggi. È scritta in uno stile chiaro e professionale, adatto a un README o a una presentazione di progetto.
+
+---
+
 ## Example
 
-Upload an image like the one below:
+This example outlines how the application works in a few intuitive steps:
 
-![Landscape Example](https://github.com/napstablook911/From-Vision-to-Sound-GenAI-Explorations-Between-Image-and-Soundscape/blob/main/15AD22E0.png)
+### 1. **Upload an Image**
 
-And let the app turn it into a unique auditory scene.
+Start by uploading a landscape image (e.g., a forest, beach, or mountain scene).
 
+![Website image](https://github.com/napstablook911/From-Vision-to-Sound-GenAI-Explorations-Between-Image-and-Soundscape/blob/main/images/Screenshot%202025-07-04%20at%2010.26.33.png)
+
+---
+
+### 2. **Generate a Caption**
+
+The app uses a vision-language model (BLIP) to generate a descriptive caption for the uploaded image.
+
+---
+
+### 3. **Edit the Caption (Optional)**
+
+You can refine the generated caption by adding auditory details (e.g., "gentle wind", "waves crashing", "birds singing"). This edited text will be used as the soundscape generation prompt.
+
+![Website image](https://github.com/napstablook911/From-Vision-to-Sound-GenAI-Explorations-Between-Image-and-Soundscape/blob/main/images/Screenshot%202025-07-04%20at%2010.27.06.png)
+
+---
+
+### 4. **Generate the Soundscape**
+
+Once the prompt is ready, click the button to generate a unique soundscape using Stable Audio Open 1.0.
+
+---
+
+### 5. **Listen & Download**
+
+Play back the generated audio directly in the browser, and optionally download it as a `.wav` file.
+
+![Website image](https://github.com/napstablook911/From-Vision-to-Sound-GenAI-Explorations-Between-Image-and-Soundscape/blob/main/images/Screenshot%202025-07-04%20at%2010.29.23.png)
+
+---
 
 ### Troubleshooting
 
@@ -147,6 +182,6 @@ And let the app turn it into a unique auditory scene.
 * If a package fails to install, make sure you're using the correct Python version and that your virtual environment is activated.
 
 
-![Alt text]()
+
  
 
