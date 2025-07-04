@@ -1,55 +1,152 @@
-# From-Vision-to-Sound-GenAI-Explorations-Between-Image-and-Soundscape
-Project Overview
+# From-Vision-to-Sound: GenAI Explorations Between Image and Soundscape
 
-This project explores the potential of GenAI in translating visual content into soundscapes. Starting with images, the AI generates a textual description which is then used to create an evocative sonic environment, simulating a soundscape.
- 	     
+## Project Overview
+
+This project explores the potential of GenAI in translating visual content into immersive soundscapes. Starting with landscape images, the AI first generates a textual description using an image captioning model, and then transforms that description into a simulated auditory environment using text-to-audio synthesis.
+
 Sight has always played a key role in human survival. In modern times, it has taken a predominant place in the development of technologies, leading to the assumption that the other senses are less important.
 
-Hearing is often overlooked, despite its important role today in the entertainment industry. 
-This presence is, nonetheless, mostly associated with visual inputs, such as images, videos, or more general aesthetics that help make the sound recognizable to audiences.
+Hearing is often overlooked, despite its vital role today in the entertainment industry. This presence is mostly associated with visual inputs—images, videos, or more general aesthetics that help make sounds recognizable to audiences.
 
-The goal of this project is to investigate how deep learning models interpret images and how this interpretation manifests acoustically, offering insights into how visual stimuli can influence auditory imagination in AI systems.
+The goal of this project is to investigate how deep learning models interpret visual input and how this interpretation manifests acoustically, offering insights into how visual stimuli can influence auditory imagination in AI systems.
+
+---
+
+## Objectives
+
+* Investigate the relationship between visual and auditory perception.
+* Assess the semantic and sensory coherence between images and the corresponding soundscapes.
+* Create a user-friendly web interface to explore these connections interactively.
+
+---
+
+## Tools and Technologies
+
+* **Python + AI Libraries**:
+
+  * `transformers`, `diffusers`, `torch`, `numpy`, `soundfile`, `Pillow`, `torchsde`, `accelerate`
+
+* **Image Captioning**:
+
+  * [`Salesforce/blip-image-captioning-base`](https://huggingface.co/Salesforce/blip-image-captioning-base) via Hugging Face `transformers`
+
+* **Audio Generation**:
+
+  * [`stabilityai/stable-audio-open-1.0`](https://huggingface.co/stabilityai/stable-audio-open-1.0) via Hugging Face `diffusers`
+
+* **Web Interface**:
+
+  * Built using `Streamlit` for interaction and visualization
+
+* **Development Environment**:
+
+  * Local machine with GPU acceleration
+
+---
+
+## AI Techniques Employed
+
+* **Vision-to-Text**: Uses the BLIP (Bootstrapped Language Image Pretraining) model to produce image captions from landscape inputs.
+* **Text-to-Audio**: Uses Stability AI’s *Stable Audio Open 1.0* to synthesize a brief audio scene from descriptive captions.
+
+---
+
+## Expected Outcomes
+
+* **Soundscapes**: Original 5-second soundscapes generated from visual inputs.
+* **Interactive Interface**: A Streamlit web app to upload an image, generate a caption, and listen to the resulting sound.
+* **Soundscapes folder**: Google Drive folder with results organized by prompt, available for consultation.
+
+---
+
+# How to install
+
+Local Installation Guide (macOS). For now only local installation with macOS system is available.
+
+This guide will help you set up and run the **Soundscape Generator** locally on your Mac.
+
+### Requirements
+
+* macOS with Python 3.9 or newer installed
+* `pip` (Python package installer)
+* A terminal application (like Terminal or iTerm)
+
+### Project Files
+
+Make sure you have the following files in a single folder:
+
+* `app.py` — the main application script
+* `requirements.txt` — the list of required Python packages
+
+---
+
+### Installation Steps
+
+1. **Open Terminal** and navigate to the folder where your files are located.
+   Example:
+
+   ```bash
+   cd path/to/your/folder
+   ```
+
+2. **(Optional but recommended)**: Create and activate a virtual environment
+
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+
+3. **Install dependencies** from `requirements.txt`
+
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 
-Objectives
+4. **To run the Streamlit app locally:**
 
-•	Investigate the relationship between visual and auditory perception.
+  ```bash
+   streamlit run app.py
+   ```
 
-•	Assess the semantic and sensory coherence between images and the corresponding soundscapes.
+Make sure you have an internet connection for the first run (models will be downloaded from Hugging Face).
 
-•	Creation of a user-friendly web interface
-
-Tools and Technologies
-
-•	[Google Colab](https://colab.research.google.com/drive/1_zZ2UCEBYPDsA7v3CW4ic-yPSMhY440r#scrollTo=01e--5cHKO_r): To manage and run the entire workflow. (Link is a draft of what the pipeline might look like, very rough draft)
-
-•	Python + AI Libraries: transformers, diffusers, torch, torchaudio
-
-•	[CLIP](https://huggingface.co/openai/clip-vit-large-patch14) or [BLIP](https://huggingface.co/Salesforce/blip-image-captioning-base): for image captioning
-
-•	[MusicGen from Facebook](https://huggingface.co/spaces/facebook/MusicGen) (or another text-to-audio model, depending on results) 
-
-•	[Gradio](https://www.gradio.app)/[Firebase studio](https://firebase.google.com): To build a web interface.
-
-•	[Hugging Face](https://huggingface.co/models): For pre-trained models.
+---
 
 
-AI Techniques Employed
+## Performance Notes
 
-•	Vision-to-Text: Multimodal models (BLIP, CLIP) to generate a textual description from an image.
+> A **GPU is strongly recommended** for stable and fast performance.
 
-•	Text-to-Audio: Models like [MusicGen](https://huggingface.co/spaces/facebook/MusicGen) and trials with other different Hugging Face-based models for synthesizing audio from textual prompts.
-Expected Outcomes
+This app uses high-performance transformer and diffusion models. Performance varies significantly by hardware.
 
-•	Soundscapes: Generated from images, providing a listening experience for each visual input.
+If you're using a Mac with M1/M2 chip, make sure your `torch` installation supports MPS:
 
-•	[Gradio interface](https://www.gradio.app)/[Firebase studio](https://firebase.google.com): for interactively navigating the process of generating soundscapes from images (optional)
+```python
+import torch
+print(torch.backends.mps.is_available())
+```
 
-•	A final report with results analysis, critical reflections, and observations on how the AI models handle the transformation from image to sound.
+## Example
+
+Upload an image like the one below:
+
+![Landscape Example](https://github.com/napstablook911/From-Vision-to-Sound-GenAI-Explorations-Between-Image-and-Soundscape/blob/main/15AD22E0.png)
+
+And let the app turn it into a unique auditory scene.
 
 
-![Alt text](https://github.com/napstablook911/From-Vision-to-Sound-GenAI-Explorations-Between-Image-and-Soundscape/blob/main/15AD22E0.png#:~:text=Files%C2%A0mainAdd%20filet-,15AD22E0.png)
+### Troubleshooting
 
-![Alt text](https://github.com/napstablook911/From-Vision-to-Sound-GenAI-Explorations-Between-Image-and-Soundscape/blob/main/7D900561.png#:~:text=Files%C2%A0mainAdd%20filet15AD22E0.png-,7D900561.png)
+* If you see a `Permission denied` or `zsh: command not found`, try:
+
+  ```bash
+  chmod +x app.py
+  ```
+
+* If a package fails to install, make sure you're using the correct Python version and that your virtual environment is activated.
+
+
+![Alt text]()
  
 
